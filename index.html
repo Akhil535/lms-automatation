@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Text Area Example</title>
+    <!-- Bootstrap CSS used  -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('118Z_2012.w017.n001.325B.p15.325.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding-top: 50px;
+            margin: auto;
+        }
+
+        .textarea-container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px; 
+        }
+
+        textarea {
+            height: 440px !important;
+            width: calc(100% - 20px); 
+            resize: none; 
+            overflow-y: scroll; 
+            margin-bottom: 0; 
+            border: 1px solid #ced4da;
+            font-size: 14px;
+        }
+
+        .centered-h1 {
+            text-align: center;
+            color: #fb00ff;
+            margin-bottom: 20px;
+        }
+
+        .capitalized-text-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            margin-bottom: 0px;
+        }
+
+        .copy-btn {
+            margin-left: 10px;
+        }
+        .copy-btn:hover{
+            background-color: #3fc7ec;
+            color: white;
+            transition: all 0.3s ;
+            border:  none !important;
+        }
+        .row{
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 10px !important;
+            flex-wrap: nowrap;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="centered-h1">Uniathena</h1>
+        <div class="row">
+            <div class="col-md-6 textarea-container">
+                <h2>Input Text</h2>
+                <div class="form-group">
+                    <label for="textarea1">Text Area 1</label>
+                    <textarea class="form-control" id="textarea1" rows="5" placeholder="Enter your text here..."></textarea>
+                </div>
+            </div>
+            <div class="col-md-6 textarea-container">
+                <div class="capitalized-text-container">
+                    <h2>Capitalized Text</h2>
+                    <div class="copy-btn-container">
+                        <button class="btn btn-primary copy-btn" id="copyBtn" style="display: none;">Copy</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="textarea2">Text Area 2</label>
+                    <textarea class="form-control" id="textarea2" rows="5" ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- bootstrap ... section ....  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <!-- javascript section to link  -->
+    <script src="app.js"></script>
+</body>
+</html>
