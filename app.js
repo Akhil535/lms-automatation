@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (line.startsWith('Question:')) {
                 return line.replace('Question:', 'Q.');
             }
+                else if (!line.startsWith('Q.') && !line.startsWith('Question:') && !line.startsWith('Answer:') && !line.startsWith('Explanation:')) {
+                    return line; // Return other lines unchanged
+            }
 
             const parts = line.split(':');
             if (parts.length > 1) {
@@ -64,21 +67,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    //copy the clipboard from textarea 2
+    //copy the clipboard from textarea 
     copyBtn.addEventListener("click", function() {
         outputTextarea.select();
         document.execCommand("copy");
         alert("Copied to clipboard!");
     });
 
-    
+    // Initial processing in case there's pre-existing text
     const initialText = inputTextarea.value.trim();
     if (initialText.length > 0) {
         outputTextarea.value = processText(initialText);
         copyBtn.style.display = 'block';
     }
 
-    
+    // Adjust textarea heights initially
     adjustHeight(inputTextarea);
     adjustHeight(outputTextarea);
 });
